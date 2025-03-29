@@ -1,0 +1,66 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean name="listBean" class="com.springTutorial.injectCollections.Student">
+		<property name="addresses">
+			<list>
+				<value>mumbai</value>
+				<value>pune</value>
+				<value>delhi</value>
+			</list>
+		</property>
+		
+		<property name="phoneNo">
+			<set>
+				<value>1111111</value>
+				<value>22222222</value>
+				<value>33333</value>
+				<value>444444</value>
+			</set>
+		</property>
+	</bean>
+
+	<bean name="setBean" class="com.springTutorial.injectCollections.Student">
+		<property name="phoneNo">
+			<set>
+				<value>894758558594</value>
+				<value>894734458594</value>
+				<value>894758565594</value>
+				<value>894758523598</value>
+			</set>
+		</property>
+	</bean>
+
+	<bean name="mapBean" class="com.springTutorial.injectCollections.Student">
+		<property name="courses">
+			<map>
+				<entry>
+					<key>
+						<value>101</value>
+					</key>
+					<value>Maths</value>
+				</entry>
+
+				<entry key="102" value="CS" />
+
+			</map>
+		</property>
+	</bean>
+
+
+	<bean name="propertiesBean"
+		class="com.springTutorial.injectCollections.Student">
+		<property name="appProperties">
+			<props>
+				<prop key="app.name">MySpringApp</prop>
+				<prop key="app.version">1.0</prop>
+			</props>
+		</property>
+	</bean>
+
+</beans>
+  
