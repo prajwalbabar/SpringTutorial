@@ -1,0 +1,30 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+ <!--    for property injection we can use p schema and for constructor injection we can use c schema -->
+	<bean name="student1" class="com.springTutorial.constructorInjection.Student">
+		<constructor-arg value="101" type="int"/>
+		<constructor-arg value="Prajwal" type="String"/>
+		<constructor-arg value="IT" type="String"/>
+	</bean>
+	
+	
+	<!--    for property injection we can use p schema and for constructor injection we can use c schema -->
+<!-- 	<bean name="student2" class="com.springTutorial.constructorInjection.Student" c:studentID="201" c:studentName="Amit" c:courseId='CS' />
+ -->
+ 
+ 
+ 
+<!--  If type or index is not specified, IoC will by default call the constructor with String type parameters. -->
+ <bean name="add" class="com.springTutorial.constructorInjection.Addition">
+		<constructor-arg value="12" index="0" type="double"/>
+		<constructor-arg value="11" index="1" type="double"/>
+
+	</bean>
+	
+</beans>
+  
